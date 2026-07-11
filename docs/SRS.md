@@ -80,3 +80,139 @@ The primary goals of the system are:
 - Demonstrate GoF Design Patterns
 - Apply SOLID principles
 - Develop a maintainable and scalable software architecture
+
+# 2. Overall Description
+
+## 2.1 Product Perspective
+
+The Inventory Management System is a standalone enterprise application designed to simplify inventory operations for organizations. It follows a layered architecture and applies Object-Oriented Programming principles together with GoF Design Patterns.
+
+The system manages products, warehouses, suppliers, customers, purchase orders, sales orders, stock movements, and reporting.
+
+---
+
+## 2.2 Product Functions
+
+The system provides the following core functionalities:
+
+- User authentication
+- Product management
+- Category management
+- Warehouse management
+- Supplier management
+- Customer management
+- Purchase order management
+- Sales order management
+- Inventory tracking
+- Stock movement tracking
+- Low stock notifications
+- Report generation
+- Inventory valuation (FIFO, LIFO, Weighted Average)
+- User authorization
+
+---
+
+## 2.3 User Classes
+
+### Administrator
+
+Responsible for managing the entire system.
+
+Permissions:
+
+- Manage users
+- Manage products
+- Manage warehouses
+- View reports
+- Configure notifications
+
+---
+
+### Warehouse Staff
+
+Responsible for warehouse operations.
+
+Permissions:
+
+- Add stock
+- Remove stock
+- Transfer stock
+- View inventory
+
+---
+
+### Manager
+
+Responsible for monitoring business performance.
+
+Permissions:
+
+- View reports
+- Monitor stock levels
+- Approve purchase orders
+
+---
+
+### Supplier
+
+Responsible for supplying products.
+
+Permissions:
+
+- View purchase orders
+- Update delivery status
+
+---
+
+### Customer
+
+Responsible for purchasing products.
+
+Permissions:
+
+- Place orders
+- View order history
+
+---
+
+## 2.4 Operating Environment
+
+- Windows 11
+- Java 21
+- Spring Boot
+- PostgreSQL
+- Maven
+- Git
+- GitHub
+
+---
+
+## 2.5 Design Constraints
+
+The project must:
+
+- Follow SOLID principles
+- Apply GoF Design Patterns
+- Use layered architecture
+- Be implemented in Java
+- Use PostgreSQL database
+- Support future scalability
+
+---
+
+## 2.6 Assumptions and Dependencies
+
+Assumptions:
+
+- Database server is available.
+- Users have valid accounts.
+- Internet connection is available for notifications.
+
+Dependencies:
+
+- Spring Boot
+- Spring Data JPA
+- Lombok
+- PostgreSQL
+- Maven
+- Git
