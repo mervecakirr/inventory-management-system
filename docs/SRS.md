@@ -216,3 +216,89 @@ Dependencies:
 - PostgreSQL
 - Maven
 - Git
+
+# 3. Functional Requirements
+
+## Product Management
+
+| ID | Requirement |
+|----|-------------|
+| FR-001 | The system shall allow administrators to create a new product. |
+| FR-002 | The system shall allow administrators to update product information. |
+| FR-003 | The system shall allow administrators to delete products. |
+| FR-004 | The system shall allow users to search products by name or barcode. |
+| FR-005 | The system shall display current stock quantity for each product. |
+
+---
+
+## Category Management
+
+| ID | Requirement |
+|----|-------------|
+| FR-006 | The system shall allow administrators to create categories. |
+| FR-007 | The system shall allow products to belong to exactly one category. |
+| FR-008 | The system shall allow users to filter products by category. |
+
+---
+
+## Warehouse Management
+
+| ID | Requirement |
+|----|-------------|
+| FR-009 | The system shall allow administrators to create warehouses. |
+| FR-010 | The system shall assign products to warehouses. |
+| FR-011 | The system shall support transferring stock between warehouses. |
+
+---
+
+## Supplier Management
+
+| ID | Requirement |
+|----|-------------|
+| FR-012 | The system shall allow administrators to register suppliers. |
+| FR-013 | The system shall associate suppliers with products. |
+| FR-014 | The system shall maintain supplier contact information. |
+
+---
+
+## Inventory Management
+
+| ID | Requirement |
+|----|-------------|
+| FR-015 | The system shall increase stock quantities after purchase orders. |
+| FR-016 | The system shall decrease stock quantities after sales orders. |
+| FR-017 | The system shall prevent stock quantities from becoming negative. |
+| FR-018 | The system shall record every stock movement. |
+| FR-019 | The system shall calculate inventory value using FIFO, LIFO, or Weighted Average strategies. |
+
+---
+
+## Notification Management
+
+| ID | Requirement |
+|----|-------------|
+| FR-020 | The system shall notify users when stock falls below the minimum threshold. |
+| FR-021 | The system shall support email notifications. |
+| FR-022 | The system shall support SMS notifications. |
+| FR-023 | The system shall support mobile notifications. |
+
+---
+
+## Reporting
+
+| ID | Requirement |
+|----|-------------|
+| FR-024 | The system shall generate inventory reports. |
+| FR-025 | The system shall generate sales reports. |
+| FR-026 | The system shall generate purchase reports. |
+| FR-027 | The system shall generate low-stock reports. |
+
+---
+
+## Security
+
+| ID | Requirement |
+|----|-------------|
+| FR-028 | The system shall authenticate users before granting access. |
+| FR-029 | The system shall authorize users according to their roles. |
+| FR-030 | The system shall log important inventory operations. |
