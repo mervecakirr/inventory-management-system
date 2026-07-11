@@ -302,3 +302,166 @@ Dependencies:
 | FR-028 | The system shall authenticate users before granting access. |
 | FR-029 | The system shall authorize users according to their roles. |
 | FR-030 | The system shall log important inventory operations. |
+
+# 4. Non-Functional Requirements
+
+## Performance
+
+| ID | Requirement |
+|----|-------------|
+| NFR-001 | The system shall respond to user requests within 2 seconds under normal load. |
+| NFR-002 | The system shall support at least 100 concurrent users. |
+| NFR-003 | The system shall process inventory updates in real time. |
+
+---
+
+## Security
+
+| ID | Requirement |
+|----|-------------|
+| NFR-004 | User authentication shall be required before accessing the system. |
+| NFR-005 | Passwords shall be securely encrypted. |
+| NFR-006 | User roles shall determine access permissions. |
+
+---
+
+## Reliability
+
+| ID | Requirement |
+|----|-------------|
+| NFR-007 | The system shall operate continuously with minimal downtime. |
+| NFR-008 | All inventory transactions shall be stored reliably. |
+| NFR-009 | Data consistency shall be maintained during failures. |
+
+---
+
+## Maintainability
+
+| ID | Requirement |
+|----|-------------|
+| NFR-010 | The project shall follow SOLID principles. |
+| NFR-011 | The project shall implement GoF Design Patterns. |
+| NFR-012 | Source code shall be documented and modular. |
+
+---
+
+## Scalability
+
+| ID | Requirement |
+|----|-------------|
+| NFR-013 | The system shall support adding new product types without modifying existing code. |
+| NFR-014 | The architecture shall allow adding new notification channels easily. |
+| NFR-015 | The system shall support future integration with ERP systems. |
+
+---
+
+## Availability
+
+| ID | Requirement |
+|----|-------------|
+| NFR-016 | The system shall be available 99% of the time. |
+| NFR-017 | Database backups shall be performed regularly. |
+
+---
+
+## Usability
+
+| ID | Requirement |
+|----|-------------|
+| NFR-018 | The user interface shall be simple and intuitive. |
+| NFR-019 | Error messages shall be meaningful and user-friendly. |
+
+---
+
+## Compatibility
+
+| ID | Requirement |
+|----|-------------|
+| NFR-020 | The application shall support Java 21. |
+| NFR-021 | The application shall use PostgreSQL as the database system. |
+
+---
+
+## Logging & Monitoring
+
+| ID | Requirement |
+|----|-------------|
+| NFR-022 | All critical operations shall be logged. |
+| NFR-023 | System errors shall be recorded for troubleshooting. |
+
+---
+
+## Testing
+
+| ID | Requirement |
+|----|-------------|
+| NFR-024 | Unit tests shall be implemented using JUnit 5. |
+| NFR-025 | The project shall be testable using REST API testing tools such as Postman. |
+
+# 5. Business Rules
+
+| ID | Business Rule |
+|----|---------------|
+| BR-001 | Every product must belong to exactly one category. |
+| BR-002 | Every warehouse must have a unique identifier. |
+| BR-003 | Product stock quantity cannot be negative. |
+| BR-004 | Stock transfers must occur between existing warehouses. |
+| BR-005 | Purchase orders increase stock quantities. |
+| BR-006 | Sales orders decrease stock quantities. |
+| BR-007 | Low-stock notifications shall be sent automatically. |
+| BR-008 | Every stock movement shall be recorded. |
+| BR-009 | Only administrators may delete products. |
+| BR-010 | Reports are generated from the latest inventory data. |
+
+# 6. System Features
+
+The Inventory Management System consists of the following modules:
+
+- Authentication & Authorization
+- Product Management
+- Category Management
+- Warehouse Management
+- Supplier Management
+- Customer Management
+- Purchase Order Management
+- Sales Order Management
+- Inventory Management
+- Stock Movement Tracking
+- Notification Management
+- Report Generation
+- ERP Integration
+- Logging System
+
+# 7. Design Patterns
+
+The project applies the following Gang of Four (GoF) Design Patterns:
+
+| Pattern | Purpose |
+|----------|---------|
+| Singleton | Database connection and logging |
+| Factory Method | Product creation |
+| Builder | Complex product creation |
+| Strategy | Inventory valuation algorithms |
+| Observer | Low stock notifications |
+| State | Stock status management |
+| Command | Inventory operations |
+| Decorator | Optional product features |
+| Facade | Simplified service access |
+| Adapter | External ERP integration |
+| Proxy | Repository access control |
+
+# 8. Future Enhancements
+
+Possible future improvements include:
+
+- Barcode scanning support
+- QR code integration
+- Mobile application
+- AI-based inventory prediction
+- Dashboard with analytics
+- Multi-language support
+- Cloud deployment
+- Docker and Kubernetes support
+- Integration with SAP ERP
+- Email report scheduling
+
