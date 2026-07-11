@@ -1,0 +1,60 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+skinparam shadowing false
+
+actor Administrator
+actor "Warehouse Staff" as Staff
+actor Manager
+actor Supplier
+actor Customer
+
+rectangle "Inventory Management System" {
+
+  usecase "Login" as UC1
+
+  usecase "Manage Products" as UC2
+  usecase "Manage Categories" as UC3
+  usecase "Manage Warehouses" as UC4
+  usecase "Manage Suppliers" as UC5
+
+  usecase "Track Inventory" as UC6
+  usecase "Transfer Stock" as UC7
+  usecase "Record Stock Movement" as UC8
+
+  usecase "Create Purchase Order" as UC9
+  usecase "Create Sales Order" as UC10
+
+  usecase "Generate Reports" as UC11
+  usecase "Receive Notifications" as UC12
+
+  usecase "Manage Users" as UC13
+}
+
+Administrator --> UC1
+Administrator --> UC2
+Administrator --> UC3
+Administrator --> UC4
+Administrator --> UC5
+Administrator --> UC11
+Administrator --> UC13
+
+Staff --> UC1
+Staff --> UC6
+Staff --> UC7
+Staff --> UC8
+
+Manager --> UC1
+Manager --> UC11
+Manager --> UC12
+
+Supplier --> UC9
+
+Customer --> UC10
+
+UC7 .> UC8 : <<include>>
+UC9 .> UC8 : <<include>>
+UC10 .> UC8 : <<include>>
+
+@enduml

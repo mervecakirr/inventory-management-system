@@ -1,0 +1,63 @@
+@startuml
+skinparam packageStyle rectangle
+skinparam shadowing false
+
+package "Presentation Layer" {
+    package controller
+    package dto
+}
+
+package "Business Layer" {
+    package service
+    package facade
+}
+
+package "Persistence Layer" {
+    package repository
+}
+
+package "Domain Layer" {
+    package model
+}
+
+package "Design Patterns" {
+
+    package factory
+    package builder
+    package strategy
+    package observer
+    package state
+    package command
+    package decorator
+    package adapter
+    package proxy
+
+}
+
+package "Infrastructure" {
+
+    package config
+    package security
+    package mapper
+    package exception
+    package util
+
+}
+
+controller --> service
+service --> repository
+service --> model
+
+facade --> service
+
+factory --> model
+builder --> model
+strategy --> service
+observer --> service
+state --> model
+command --> service
+decorator --> model
+adapter --> service
+proxy --> repository
+
+@enduml
