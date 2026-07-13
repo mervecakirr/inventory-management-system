@@ -1,0 +1,29 @@
+@startuml
+
+title Builder Pattern
+
+class ProductBuilder{
++id(Long)
++name(String)
++barcode(String)
++price(double)
++stockQuantity(int)
++category(Category)
++supplier(Supplier)
++warehouse(Warehouse)
++build(ProductType):Product
+}
+
+abstract class Product
+
+class ElectronicProduct
+class FoodProduct
+class ClothingProduct
+
+Product <|-- ElectronicProduct
+Product <|-- FoodProduct
+Product <|-- ClothingProduct
+
+ProductBuilder --> Product
+
+@enduml
