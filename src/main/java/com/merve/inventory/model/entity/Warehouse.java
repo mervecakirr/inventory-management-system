@@ -1,4 +1,4 @@
-package com.merve.inventory.model;
+package com.merve.inventory.model.entity;
 
 public class Warehouse {
 
@@ -12,9 +12,16 @@ public class Warehouse {
     public Warehouse(Long id,
                      String name,
                      String location) {
-
         this.id = id;
         this.name = name;
         this.location = location;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
     }
 }

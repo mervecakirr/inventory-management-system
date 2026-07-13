@@ -1,4 +1,4 @@
-package com.merve.inventory.model;
+package com.merve.inventory.model.entity;
 
 public class Supplier {
 
@@ -14,10 +14,17 @@ public class Supplier {
                     String companyName,
                     String email,
                     String phone) {
-
         this.id = id;
         this.companyName = companyName;
         this.email = email;
         this.phone = phone;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getCompanyName() {
+        return companyName;
     }
 }

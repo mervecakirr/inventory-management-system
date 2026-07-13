@@ -1,0 +1,33 @@
+@startuml
+
+title Factory Method Pattern
+
+abstract class Product {
+    +getProductType()
+}
+
+class ElectronicProduct
+class FoodProduct
+class ClothingProduct
+
+Product <|-- ElectronicProduct
+Product <|-- FoodProduct
+Product <|-- ClothingProduct
+
+enum ProductType{
+    ELECTRONIC
+    FOOD
+    CLOTHING
+}
+
+interface ProductFactory{
+    +createProduct(type,id,name,barcode,price,stock):Product
+}
+
+class DefaultProductFactory
+
+ProductFactory <|.. DefaultProductFactory
+
+DefaultProductFactory --> Product
+
+@enduml
