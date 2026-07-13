@@ -1,0 +1,20 @@
+@startuml
+
+title Singleton Pattern
+
+class DatabaseConnection {
+-instance : DatabaseConnection
+-DatabaseConnection()
++getInstance() : DatabaseConnection
++connect()
+}
+
+class Logger {
+-instance : Logger
+-Logger()
++getInstance() : Logger
++info(String)
++error(String)
+}
+
+@enduml
