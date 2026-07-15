@@ -78,4 +78,20 @@ Customer "1" <-- "*" SalesOrder
 
 Employee "1" <-- "*" PurchaseOrder
 
+class StockMovement{
+-id : Long
+-quantity : int
+-unitPrice : double
+-movementDate : LocalDate
+-movementType : MovementType
+}
+
+enum MovementType{
+PURCHASE
+SALE
+}
+
+Product "1" <-- "0..*" StockMovement
+StockMovement --> MovementType
+
 @enduml
